@@ -30,3 +30,7 @@ export interface Chart {
     };
   };
 }
+
+export interface Input {
+  type: "number" | "text";
+}
