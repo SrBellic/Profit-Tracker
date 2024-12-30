@@ -3,7 +3,7 @@ import { Input as InputProps } from "../../interfaces/interfaces";
 interface Props {
   type: InputProps["type"];
   placeHolder: InputProps["placeHolder"];
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default function Input({ type, placeHolder, onChange }: Props) {
