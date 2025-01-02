@@ -1,5 +1,5 @@
 import "./App.css";
-import { DonutChart } from "./components/Charts/Charts";
+import { DonutChart, LineChart } from "./components/Charts/Charts";
 import { CalculatorForm } from "./components/features/Form";
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
         </div>
         <div className="w-56">
           <CalculatorForm />
+          <LineChart />
         </div>
       </section>
     </>
