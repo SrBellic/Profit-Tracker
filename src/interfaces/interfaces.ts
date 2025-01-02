@@ -7,14 +7,41 @@ export interface Chart {
       backgroundColor: string[];
       borderColor: string[];
       hoverOffset: number;
+      tension?: number;
+      fill?: boolean;
+      pointRadius?: number;
+      pointBorderColor?: string[];
+      pointBackgroundColor?: string[];
     }>;
   };
   options: {
     responsive: boolean;
+    maintainAspectRatio: boolean; //No usar con graficos de Pie o Dona
+    scales: {
+      //Uso para graficos de Linea
+      y: {
+        beginAtZero: boolean;
+      };
+      // x: {
+      //   type: string;
+      //   time: {
+      //     unit: "day";
+      //     displayFormats: {
+      //       month: "dd/mm/yyyy" | "dd/mm/yy" | "mm/dd/yyyy" | "mm/dd/yy"; //chart.js solo acepta guiones como separadores
+      //     };
+      //   };
+      // };
+    };
     plugins: {
       legend: {
         display: boolean;
+        labels?: {
+          font: {
+            size: 16 | 18 | 20;
+          };
+        };
         position?: "left" | "top" | "right" | "bottom" | "center" | "chartArea";
+        align?: "start" | "center" | "end";
       };
       title: {
         align?: "start" | "center" | "end";
