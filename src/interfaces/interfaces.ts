@@ -1,11 +1,12 @@
 export interface Chart {
   data: {
-    labels: string[];
+    labels: string[]; //En el grafico de lineas este muestra las etiquetas del eje x
     datasets: Array<{
       label: string;
       data: number[];
       backgroundColor: string[];
       borderColor: string[];
+      borderWidth?: number;
       hoverOffset: number;
       tension?: number;
       fill?: boolean;
@@ -37,7 +38,7 @@ export interface Chart {
         display: boolean;
         labels?: {
           font: {
-            size: 16 | 18 | 20;
+            size: 10 | 12 | 14 | 16 | 18 | 20;
           };
         };
         position?: "left" | "top" | "right" | "bottom" | "center" | "chartArea";
