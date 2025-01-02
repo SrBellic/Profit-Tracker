@@ -11,6 +11,7 @@ import {
   PointElement,
   LineElement,
   TimeScale,
+  Filler,
 } from "chart.js";
 import {
   donutChartData,
@@ -29,7 +30,8 @@ ChartJS.register(
   ArcElement,
   PointElement,
   LineElement,
-  TimeScale
+  TimeScale,
+  Filler
 );
 
 export function DonutChart() {
