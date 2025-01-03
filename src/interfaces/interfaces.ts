@@ -59,6 +59,19 @@ export interface Chart {
   };
 }
 
+export interface Button {
+  text: string;
+  color: string;
+  borderNone?:
+    | "border-none"
+    | "border-t-0"
+    | "border-r-0"
+    | "border-b-0"
+    | "border-l-0"
+    | "border-x-0"
+    | "border-y-0";
+}
+
 export interface Input {
   type: "number" | "text";
   placeHolder: string;
