@@ -11,11 +11,11 @@ function App() {
         </h1>
         <h2>Balance: N/A</h2>
       </div>
-      <section className="flex flex-cols justify-between border-2 border-gray-200 p-10 rounded-lg">
+      <section className="flex border-2 border-gray-200 p-10 rounded-lg shadow-lg shadow-gray-400">
         <div className="w-2/5">
           <DonutChart />
         </div>
-        <div className="w-56">
+        <div className="w-1/2">
           <CalculatorForm />
           <LineChart />
         </div>
