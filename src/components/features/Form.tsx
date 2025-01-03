@@ -8,17 +8,18 @@ export function CalculatorForm() {
   });
 
   const [selectedValue, setSelectedValue] = useState(placeHolder.content[0]);
-
+  // Maneja el evento de selección en un elemento <select>
   const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedIndex = event.target.selectedIndex;
-    setSelectedValue(placeHolder.content[selectedIndex]);
+    const selectedIndex = event.target.selectedIndex; // Obtiene el índice del elemento seleccionado
+    setSelectedValue(placeHolder.content[selectedIndex]); // Actualiza el valor seleccionado basado en el índice
   };
 
+  // Maneja el cambio de entrada en un elemento <input>
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = event.target.value;
+    const newValue = event.target.value; // Obtiene el nuevo valor del input
     setPlaceHolder((prevState) => ({
-      ...prevState,
-      value: [newValue, ...prevState.value.slice(1)],
+      ...prevState, // Mantiene el estado previo
+      value: [newValue, ...prevState.value.slice(1)], // Actualiza el primer valor en el array 'value' con el nuevo valor
     }));
   };
 
