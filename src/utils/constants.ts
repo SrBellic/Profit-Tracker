@@ -13,6 +13,17 @@ export const COLORS = {
   borderOrange: "rgba(255, 159, 64, 1)",
 };
 
+export const BUTTON_COLORS =
+  //Se debe importar siempre que se quiera estilizar los botones
+  {
+    red: `bg-[#ff006680] border-[#ff0066]`,
+    blue: `bg-[#006eff80] border-[#006eff]`,
+    yellow: `bg-[#ffce5680] border-[#ffce56]`,
+    green: `bg-[#4bff6480] border-[#4bff64]`,
+    purple: `bg-[#9966ff80] border-[#9966ff]`,
+    orange: `bg-[#ff9f4080] border-[#ff9f40]`,
+  };
+
 export const CHART_LABELS = {
   BALANCE: ["Gastos", "Ahorros", "Ingresos"],
   MONTHS: [
