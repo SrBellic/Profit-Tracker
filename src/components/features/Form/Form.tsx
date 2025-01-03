@@ -1,10 +1,12 @@
 import { useState } from "react";
-import Input from "../UI/Input";
+import { CHART_LABELS as LABELS } from "../../../utils/constants";
+import Input from "../../UI/Input";
+import "./form.module.css";
 
 export function CalculatorForm() {
   const [placeHolder, setPlaceHolder] = useState({
     value: ["ingresos", "gastos", "ahorros"],
-    content: ["Ingresos", "Gastos", "Ahorros"],
+    content: LABELS.BALANCE,
   });
 
   const [selectedValue, setSelectedValue] = useState(placeHolder.content[0]);
@@ -26,13 +28,13 @@ export function CalculatorForm() {
   return (
     <>
       <form className="">
-        <div className="flex">
+        <div className="flex justify-end">
           <Input
             type="number"
             placeHolder={`Cantidad: ${selectedValue}`}
             onChange={handleInputChange}
           />
-          <select name="algo" className="mx-2" onChange={handleSelect}>
+          <select name="algo" className="ms-3" onChange={handleSelect}>
             {placeHolder.value.map((item, index) => (
               <option key={item} value={item}>
                 {placeHolder.content[index]}

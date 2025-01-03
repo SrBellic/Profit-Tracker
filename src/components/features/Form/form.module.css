@@ -1,0 +1,8 @@
+select:focus {
+  outline: none;
+  border: 4px solid #818cf8;
+  border-radius: 5px;
+}
+input:focus {
+  outline: none;
+}
