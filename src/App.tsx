@@ -1,7 +1,6 @@
 import "./App.css";
 import { DonutChart, LineChart } from "./components/Charts/Charts";
 import { CalculatorForm } from "./components/features/Form/Form";
-import ButtonGroup from "./components/UI/ButtonGroup";
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
         <div className="w-1/2">
           <CalculatorForm />
           <LineChart />
-          <ButtonGroup />
         </div>
       </section>
     </>
