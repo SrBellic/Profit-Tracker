@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CHART_LABELS as LABELS } from "../../../utils/constants";
 import Input from "../../UI/Input";
 import "./form.module.css";
+import ButtonGroup from "../../UI/ButtonGroup";
 
 export function CalculatorForm() {
   const [placeHolder, setPlaceHolder] = useState({
@@ -34,6 +35,7 @@ export function CalculatorForm() {
             placeHolder={`Cantidad: ${selectedValue}`}
             onChange={handleInputChange}
           />
+          <ButtonGroup />
           <select name="algo" className="ms-3" onChange={handleSelect}>
             {placeHolder.value.map((item, index) => (
               <option key={item} value={item}>
