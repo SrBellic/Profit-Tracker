@@ -3,14 +3,31 @@ import Button from "./Button";
 
 export default function ButtonGroup() {
   return (
-    <div>
-      <Button text="Gastos" color={BUTTON_COLORS.red} />
+    <>
       <Button
-        borderNone="border-x-0"
-        text="Ahorros"
-        color={BUTTON_COLORS.blue}
+        onClick={() => console.log("Gastos")}
+        text="Gastos"
+        borderNone="border-r-0"
+        color={BUTTON_COLORS.gray}
+        rounded={true}
+        position="left"
       />
-      <Button text="Ingresos" color={BUTTON_COLORS.green} />
-    </div>
+      <Button
+        onClick={() => console.log("Ahorros")}
+        text="Ahorros"
+        borderNone="border-x-0"
+        color={BUTTON_COLORS.gray}
+        rounded={false}
+        position="center"
+      />
+      <Button
+        onClick={() => console.log("Ingresos")}
+        text="Ingresos"
+        borderNone="border-l-0"
+        color={BUTTON_COLORS.gray}
+        rounded={true}
+        position="right"
+      />
+    </>
   );
 }
