@@ -60,7 +60,7 @@ export interface Chart {
 }
 
 export interface Button {
-  onClick: void;
+  onClick: () => void;
   text: string;
   color: string;
   position?: "left" | "right" | "center" | "top" | "bottom";
