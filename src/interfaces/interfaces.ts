@@ -60,8 +60,11 @@ export interface Chart {
 }
 
 export interface Button {
+  onClick: void;
   text: string;
   color: string;
+  position?: "left" | "right" | "center" | "top" | "bottom";
+  rounded: boolean;
   borderNone?:
     | "border-none"
     | "border-t-0"
